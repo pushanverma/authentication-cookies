@@ -4,6 +4,7 @@ import Form from "./components/form";
 
 
 function App() {
+  console.log("App running")
   return (
    <>
     <Form/>
