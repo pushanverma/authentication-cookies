@@ -4,14 +4,17 @@ import Cookies from 'universal-cookie';
 import Secret from "./secret";
 import { Routes, Route ,Link } from "react-router-dom";
 
-const Form = () => {
+const Form = (props) => {
+
+  
+console.log(props.validation,"...validation")
 
   const cookies = new Cookies();
   const [username,setUsername]=useState(null);
   const[password,setPassword]=useState(null);
   const[validation,setValidation]=useState(false);
 
-  
+  var usercookies=null;
     console.log(username,"...username ");
     console.log(password,"...password ");
 
@@ -26,7 +29,7 @@ const Form = () => {
 
         if(validationstate){
             console.log("you are authorized 👍")
-            cookies.set('user-set',username,{ path: '/' });
+            usercookies=cookies.set('user-set',username,{ path: '/' });
             console.log(cookies.get('user-set'),".....cookies ");
             setValidation(true)
         }
@@ -53,13 +56,13 @@ const Form = () => {
        <button onClick={()=>handleAuthorization()}>Submit</button>
 
         {
-          validation &&
-             <a href="./secret"><button>Click me</button></a>
+          validation && 
+             <button><Link to="/secret">Click me</Link></button>
         }
 
 
         <Routes>
-           <Route path='/Secret' element={<Secret/>} /> 
+           <Route path='/Secret' element={<Secret validation={validation}  username={username}  usercookies={usercookies} />} /> 
        </Routes> 
         
       
