@@ -1,0 +1,7 @@
+1. It should route to another page(Secret)  ---Route
+2. Should show the name of authorized user (pass username in props)  --Hi Pushan !
+3. Show details 
+4. change username to always lowercase---done
+5. If they have loged in , they must be there.
+6. 
+
