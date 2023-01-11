@@ -14,7 +14,7 @@ const Secret = (props) => {
     cookies.remove('user-set',props.username,{ path: '/' });
   }
 
-  
+
 
   return (
     <>

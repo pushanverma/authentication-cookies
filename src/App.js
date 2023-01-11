@@ -16,10 +16,9 @@ function App() {
 
   return (
    <>
-
       <Routes>
            <Route path='/' element={<Form/>}/>
-           {/* <Route path='/test1' element={<Test1/>}/> */}
+           <Route path='/form' element={<Form/>}/>
            <Route path='/secret' element={<Secret/>}/>
       </Routes>
 
