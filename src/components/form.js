@@ -6,7 +6,6 @@ import { Routes, Route ,Link } from "react-router-dom";
 
 const Form = (props) => {
 
-  
 console.log(props.validation,"...validation")
 
   const cookies = new Cookies();
@@ -42,6 +41,8 @@ console.log(props.validation,"...validation")
         }
 
         console.log(validation,".....this is validation")
+
+       
 
 
   return (
