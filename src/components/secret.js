@@ -5,17 +5,16 @@ import Cookies from 'universal-cookie';
 
 
 const Secret = (props) => {
+
   const cookies = new Cookies();
-  console.log(props.validation,"....validation");
-  console.log(props.username,"...username")
-  console.log(props.usercookies,".....usercookies")
+  console.log(props.validation,"....validation in secret");
+  console.log(props.username,"...username in secret")
+  console.log(props.usercookies,".....usercookies in secret")
 
   const removeCookies=()=>{
     cookies.remove('user-set',props.username,{ path: '/' });
   }
-
-
-
+  
   return (
     <>
     <h1> Hi {props.username} !!</h1><br />

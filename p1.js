@@ -7,25 +7,24 @@ let b="pushan";
 let arr=a.split('');
 // console.log(arr,"...arr")
 
-handleCheck(arr,a);
-if(a.length>=8){
+handleCheck(a);
+
+   var lengthcheck;
+   var specialchchcek;
+   var numericheck;
+   var uppercasecheck;
+
+   if(a.length>=8){
     console.log("length greater than 8");
+    lengthcheck=true;
    }
 
+function handleCheck(a){
 
-function handleCheck(arr1,a){
     console.log(a,"....a")
-    // console.log(arr1.includes(specialch));
 
     for(let i=0;i<a.length;i++){
 
-        let specialchchcek;
-        let numericheck;
-        let uppercasecheck;
-
-        // console.log(lengthcheck,"....lengthcheck");
-
-        // console.log(a.charAt(i));
         let singleChar=a.charAt(i);
 
         if(specialCh.includes(singleChar)){
@@ -41,11 +40,7 @@ function handleCheck(arr1,a){
             console.log("uppercase found")
             uppercasecheck=true;
         }
-
     }
-
-    
-
 }
 
 
