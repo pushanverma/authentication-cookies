@@ -6,6 +6,8 @@ import { Routes, Route ,Link } from "react-router-dom";
 import FormCheckLabel from 'react-bootstrap/esm/FormCheckLabel';
 
 const Form = (props) => {
+  console.log("form is called ");
+  
 
 console.log(props.validation,"...validation")
 
